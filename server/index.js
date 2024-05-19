@@ -26,7 +26,10 @@ const schemadata=mongoose.Schema({
 
 //MODEL
 const usermodel=mongoose.model("user",schemadata)
-//this is read api
+
+//this is read data
+
+//http://localhost:8080/
 app.get("/",async(req,res)=>{
     const data=await usermodel.find({})
 
@@ -36,20 +39,31 @@ app.get("/",async(req,res)=>{
 
 
 //create or save data in mongodb
+//http://localhost:8080/create
 app.post("/create",async(req,res)=>{
     console.log(req.body);
     const data=new usermodel(req.body)
     await data.save();
-    res.send({success:true, message:"data successfully saved in database"})
+    res.send({success:true, message:"data successfully saved in database", data : data})
 })
 
 //update data
+//http://localhost:8080/update
 app.put("/update",async(req,res)=>{
     console.log(req.body);
-    await usermodel.updateOne({_id: req.body.id},{name: "fahad12345"})
-    res.send({success:true, message:"data updated successfully"})
+    const {id,...rest}=req.body;
+    const data =await usermodel.updateOne({_id : id},rest)
+    res.send({success:true, message:"data updated successfully", data : data })
 })
+//delete data
+//http://localhost:8080/delete/id
+app.delete("/delete/:id",async(req,res)=>{
+  const id=req.params.id;
+  console.log(id);
+  const data=await usermodel.deleteOne({_id : id});
+  res.send({success:true, message:"data deleted successfully", data : data })
 
+})
 
 mongoose.connect("mongodb://localhost:27017/crudapplication")
 .then(()=>{
