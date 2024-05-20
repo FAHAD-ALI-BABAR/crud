@@ -14,9 +14,9 @@ const schemadata=mongoose.Schema({
     name:String,
     email:String,
     mobile:String,
-    password:String,
+    pass:String,
     address:String,
-    date_of_birth:String,
+    dob:String,
     city:String,
     country:String,
 },{
