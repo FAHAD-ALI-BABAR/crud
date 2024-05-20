@@ -6,7 +6,68 @@
 body{
   background-color: rosybrown;
 }
-.container{
+/* General Container Styles */
+.add-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Close Button Styles */
+.close-btn {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  font-size: 24px;
+  color: #888;
+}
+
+/* Form Element Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Submit Button Styles */
+.btn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* .container{
   padding: 10px;
   
   max-width: 700px;
@@ -33,6 +94,7 @@ body{
   align-items: center;
 }
 .add-container form{
+  margin-left: 150vh;
   width: 500px;
   background-color: grey;
   display: flex;
@@ -48,7 +110,7 @@ body{
   font-size: 10px;
   padding: 10px;
   border-radius: 5px;
-}
+} */
 .close-btn{
   margin-left: auto;
   font-size: 18px;
@@ -62,4 +124,168 @@ body{
   border: 1px solid black;
   cursor: pointer;
 }
+/* .table-container {
+  width: 120vh;
+  padding: 20px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  left: 60px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+th {
+  padding: 15px 20px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 3px solid #ddd;
+}
+
+th:first-child {
+  border-top-left-radius: 10px;
+}
+
+th:last-child {
+  border-top-right-radius: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+td {
+  padding: 12px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .table-container {
+    padding: 15px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  th, td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  th {
+    text-align: right;
+  }
+
+  td {
+    text-align: left;
+  }
+
+  td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+} */
+/* General Container Styles */
+.table-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f5f5f5;
+}
+
+thead tr {
+  border-bottom: 2px solid #ddd;
+}
+
+thead td {
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  color: #333;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+tbody td {
+  padding: 10px;
+  text-align: left;
+  color: #555;
+}
+
+/* Button Styles */
+.btn {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #0056b3;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #a71d2a;
+}
+
+
+
 

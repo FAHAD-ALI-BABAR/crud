@@ -13,7 +13,7 @@ const PORTS=process.env.PORTS || 8080
 const schemadata=mongoose.Schema({
     name:String,
     email:String,
-    mobile:Number,
+    mobile:String,
     password:String,
     address:String,
     date_of_birth:String,
