@@ -124,95 +124,7 @@ input:focus {
   border: 1px solid black;
   cursor: pointer;
 }
-/* .table-container {
-  width: 120vh;
-  padding: 20px;
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  font-family: 'Roboto', sans-serif;
-  position: absolute;
-  left: 60px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  font-size: 16px;
-  color: #333;
-}
-
-thead {
-  background-color: #4CAF50;
-  color: white;
-}
-
-th {
-  padding: 15px 20px;
-  text-align: left;
-  font-weight: 600;
-  border-bottom: 3px solid #ddd;
-}
-
-th:first-child {
-  border-top-left-radius: 10px;
-}
-
-th:last-child {
-  border-top-right-radius: 10px;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-tr:hover {
-  background-color: #f1f1f1;
-}
-
-td {
-  padding: 12px 20px;
-  border-bottom: 1px solid #ddd;
-}
-
-td:first-child {
-  border-bottom-left-radius: 10px;
-}
-
-td:last-child {
-  border-bottom-right-radius: 10px;
-}
-
-@media screen and (max-width: 600px) {
-  .table-container {
-    padding: 15px;
-  }
-
-  table, thead, tbody, th, td, tr {
-    display: block;
-  }
-
-  th, td {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  th {
-    text-align: right;
-  }
-
-  td {
-    text-align: left;
-  }
-
-  td:before {
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-  }
-} */
-/* General Container Styles */
+ /* General Container Styles */
 .table-container {
   max-width: 1000px;
   margin: 50px auto;
@@ -260,8 +172,10 @@ tbody td {
 
 /* Button Styles */
 .btn {
-  padding: 5px 10px;
+  padding:8px;
+  width: 70px;
   margin-right: 5px;
+  margin-bottom: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -285,7 +199,19 @@ tbody td {
 .btn-delete:hover {
   background-color: #a71d2a;
 }
-
-
-
-
+.btn-add-container{
+  
+  position: absolute;
+  left: 40vh;
+}
+.btn-add{
+  padding:10px;
+  width: 80px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color:#0BDA51;
+  color: white;
+}

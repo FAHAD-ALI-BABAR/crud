@@ -53,12 +53,24 @@ function App(){
   getFetchData()
 
 },[])
-console.log(Datalist);
+
+const deleteform= async(id)=>{
+  const data=await axios.delete("/delete/" + id)
+   
+    if(data.data.success){
+      getFetchData()
+      alert(data.data.message)
+
+    }
+}
 
   return (
     <>
+    <div className='btn-add-container'>
+    <button className='btn-add' onClick={()=>{setAddSection(true)}}>Add</button>
+    </div>
     <div className='container'>
-      <button className='btn btn-add' onClick={()=>{setAddSection(true)}}>Add</button>
+      {/* <button className='btn btn-add' onClick={()=>{setAddSection(true)}}>Add</button> */}
       { addSection && (
         <div className='add-container'>
         <form onSubmit={handleSubmit}>
@@ -113,7 +125,7 @@ console.log(Datalist);
                     <td>{el.country}</td>
                     <td>
                       <button className='btn btn-edit'>Edit</button>
-                      <button className='btn btn-delete'>Deleted</button>
+                      <button className='btn btn-delete' onClick={()=>deleteform(el._id)}>Deleted</button>
                     </td>
                   </tr>
                 )
